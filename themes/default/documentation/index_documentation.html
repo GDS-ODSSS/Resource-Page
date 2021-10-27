@@ -1,0 +1,83 @@
+<!-- INCLUDE overall_header.html -->
+<section class="parallax-window" id="short">
+    <div id="sub_header">
+        <div class="container" id="sub_content">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{LANG_DOCUMENTATION}</h1>
+                    <div class="bread-crums">
+                        <a href="{SITE_URL}">{LANG_HOME}</a>
+                        <span class="bread-crums-span">&raquo;</span>
+                        <!-- IF THE_CATEGORIE_ID -->
+                        <a href="{PERMALINK_DOCUMENTATION}">{LANG_DOCUMENTATION}</a>
+                        <span class="bread-crums-span">&raquo;</span>
+                        <span class="current">{CATEGORIES_TITLE}</span>
+                        <!-- ELSEIF IS_SEARCH -->
+                        <a href="{PERMALINK_DOCUMENTATION}">{LANG_DOCUMENTATION}</a>
+                        <span class="bread-crums-span">&raquo;</span>
+                        <span class="current">{LANG_SEARCH} : {SEARCH_TXT}</span>
+                        <!-- ELSE -->
+                        <span class="current">{LANG_DOCUMENTATION}</span>
+                        <!-- ENDIF -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- INCLUDE banner_top.html -->
+<div class="container padding_80">
+    <div class="row">
+        <!-- IF THOP_SHOW_SIDEBAR && DOCUOP_SIDEBAR && THOP_POSITION_SIDEBAR eq 'left' -->
+        <!-- INCLUDE documentation/sidebar_documentation.html -->
+        <!-- ENDIF -->
+        <div class="<!-- IF THOP_SHOW_SIDEBAR && DOCUOP_SIDEBAR -->col-lg-9 col-md-8 col-sm-12<!-- ELSE -->col-md-12<!-- ENDIF -->">
+            <div class="head-title">
+                <!-- IF THE_CATEGORIE_ID -->
+                <h4>{CATEGORIES_TITLE}</h4>
+                <!-- ELSEIF IS_SEARCH -->
+                <h4>{LANG_SEARCH} : <small>{SEARCH_TXT}</small></h4>
+                <!-- ELSE -->
+                <h4>{LANG_DOCUMENTATION}</h4>
+                <!-- ENDIF -->
+            </div>
+            <!-- IF IS_SEARCH && SEARCH_FOUND eq '0' -->
+            <div class="alert alert-warning text-center" role="alert">{LANG_NOT_FOUND}!</div>
+            <!-- ENDIF -->
+            <div class="row">
+                <!-- BEGIN loop_documentation -->
+                <div class="<!-- IF THOP_SHOW_SIDEBAR && DOCUOP_SIDEBAR -->col-md-12<!-- ELSE -->col-md-6<!-- ENDIF -->">
+                    <div class="document-item">
+                        <h5><a href="{loop_documentation.POST_PERMANETLINK}"><!-- IF loop_documentation.POST_PIN_POST --><i class="fa fa-bolt post_pin"></i><!-- ENDIF --> {loop_documentation.POST_TITLE}</a></h5>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <i class="pe-7s-user"></i> {loop_documentation.POST_AUTHOR}
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <i class="pe-7s-ticket"></i> <a href="{loop_documentation.POST_TERM_PERMANETLINK}">{loop_documentation.POST_TERM_NAME}</a>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <i class="pe-7s-clock"></i> {loop_documentation.POST_MODIFIED}
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <i class="pe-7s-anchor"></i> {LANG_VERSION} {loop_documentation.POST_VERSION}
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <i class="pe-7s-notebook"></i> <a target="_blank" href="{loop_documentation.POST_ONLINEDOCUMENT}">{LANG_ONLINE_DOCUMENT}</a>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <i class="pe-7s-cloud-download"></i> <a target="_blank" href="{loop_documentation.POST_DOWNLOAD}">{LANG_DOWNLOAD}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END loop_documentation -->
+            </div>
+            <!-- IF SHOW_PAGINATION --><nav class="navigation pagination"><div class="nav-links">{PAGINATION}</div></nav><!-- ENDIF -->
+        </div>
+        <!-- IF THOP_SHOW_SIDEBAR && DOCUOP_SIDEBAR && THOP_POSITION_SIDEBAR eq 'right' -->
+        <!-- INCLUDE documentation/sidebar_documentation.html -->
+        <!-- ENDIF -->
+    </div>
+</div>
+<!-- INCLUDE overall_footer.html -->

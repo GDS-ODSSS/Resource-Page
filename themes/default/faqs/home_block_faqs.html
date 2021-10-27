@@ -1,0 +1,27 @@
+<!-- IF HOME_FAQS -->
+<div class="padding_80 {FAQOP_HOME_CLASS}">
+    <div class="container">
+        <div class="main_title">
+            <h2>{LANG_FREQUENTLY_ASKED_QUESTIONS}</h2>
+            <span class="divider"></span>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="accordion toggle-accordion">
+                    <!-- BEGIN loop_faqs -->
+                    <div class="section-content">
+                        <h4 class="accordion-title"><a href="#">{loop_faqs.POST_TITLE}<i class="pe-7s-angle-down"></i></a></h4>
+                        <div class="accordion-inner">{loop_faqs.POST_CONTENT}</div>
+                    </div>
+                    <!-- END loop_faqs -->
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="home-more">
+                    <a href="{PERMALINK_FAQS}"><i class="pe-7s-help1"></i> {LANG_SEE_ANSWERS}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ENDIF -->

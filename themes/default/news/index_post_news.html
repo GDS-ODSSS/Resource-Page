@@ -1,0 +1,83 @@
+<!-- INCLUDE overall_header.html -->
+<section class="parallax-window" id="short">
+    <div id="sub_header">
+        <div class="container" id="sub_content">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{LANG_NEWS}</h1>
+                    <div class="bread-crums">
+                        <a href="{SITE_URL}">{LANG_HOME}</a>
+                        <span class="bread-crums-span">&raquo;</span>
+                        <a href="{PERMALINK_NEWS}">{LANG_NEWS}</a>
+                        <span class="bread-crums-span">&raquo;</span>
+                        <a href="{CATEGORIES_PERMANETLINK}">{CATEGORIES_TITLE}</a>
+                        <span class="bread-crums-span">&raquo;</span>
+                        <span class="current">{POST_TITLE}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- INCLUDE banner_top.html -->
+<div class="container padding_80">
+    <div class="row">
+        <!-- IF THOP_SHOW_SIDEBAR && NEWSOP_SIDEBAR && THOP_POSITION_SIDEBAR eq 'left' -->
+        <!-- INCLUDE news/sidebar_news.html -->
+        <!-- ENDIF -->
+        <div class="<!-- IF THOP_SHOW_SIDEBAR && NEWSOP_SIDEBAR -->col-md-9<!-- ELSE -->col-md-12<!-- ENDIF -->">
+            <div class="post-inner">
+                <!-- IF POST_THUMB -->
+                <div class="post-img">
+                    <img src="{POST_THUMB_FULL}" alt="{POST_TITLE}">
+                </div>
+                <!-- ENDIF -->
+                <h2 class="post-title">{POST_TITLE}</h2>
+                <div class="post-meta">
+                    <span class="meta-author"><i class="pe-7s-user"></i> <a href="{POST_AUTHOR_PERMANETLINK}">{POST_AUTHOR}</a></span>
+                    <span class="meta-categories"><i class="pe-7s-ticket"></i> <a href="{POST_TERM_PERMANETLINK}">{POST_TERM_NAME}</a></span>
+                    <span class="meta-date"><i class="pe-7s-date"></i> {POST_MODIFIED}</span>
+                    <span class="meta-views"><i class="pe-7s-look"></i> {POST_VIEW} {LANG_VIEWS}</span>
+                </div>
+                <div class="post-content">{POST_CONTENT}</div>
+                <div class="clearfix"></div>
+            </div>
+            <!-- IF IS_TAGS -->
+            <div class="head-title"><h5>{LANG_TAGS}</h5></div>
+            <div class="post-tags">
+                <!-- BEGIN loop_post_tags --><a href="{loop_post_tags.TAG_LINK}">{loop_post_tags.TAG_NAME}</a>{loop_post_tags.TAG_CHAR}<!-- END loop_post_tags -->
+            </div>
+            <!-- ENDIF -->
+            <!-- IF IS_POST_RELATED -->
+            <div class="related-post mt-50 mb-20">
+                <div class="head-title">
+                    <h5>Related News</h5>
+                </div>
+                <div class="row">
+                    <!-- BEGIN loop_news_related -->
+                    <div class="col-md-6 col-sm-6 col-12">
+                        <div class="blog-grid">
+                            <div class="blog-grid-image">
+                                <a href="{loop_news_related.POST_PERMANETLINK}">
+                                    <img src="{loop_news_related.POST_THUMB_M}" alt="article image">
+                                </a>
+                                <span class="meta-date">{loop_news_related.POST_MODIFIED}</span>
+                            </div>
+                            <h3 class="blog-grid-title">
+                                <a href="{loop_news_related.POST_PERMANETLINK}">{loop_news_related.POST_TITLE}</a>
+                            </h3>
+                            <p class="blog-grid-excerpt">{loop_news_related.POST_SHORT}</p>
+                        </div>
+                    </div>
+                    <!-- END loop_news_related -->
+                </div>
+            </div>
+            <!-- ENDIF -->
+            <!-- INCLUDE comments_disqus.html -->
+        </div>
+        <!-- IF THOP_SHOW_SIDEBAR && NEWSOP_SIDEBAR && THOP_POSITION_SIDEBAR eq 'right' -->
+        <!-- INCLUDE news/sidebar_news.html -->
+        <!-- ENDIF -->
+    </div>
+</div>
+<!-- INCLUDE overall_footer.html -->

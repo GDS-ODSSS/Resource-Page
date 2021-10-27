@@ -1,0 +1,53 @@
+<!-- IF IS_HOMEPAGE --><!-- ELSE --><!-- INCLUDE banner_bottom.html --><!-- ENDIF -->
+<!-- footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="copyright">
+                    {THOP_COPYRIGHT}
+                    <br /> Made with <i class="fa fa-heart"></i> and alot of <i class="fa fa-coffee"></i> in Copenhagen
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- end footer -->
+</div>
+<div class="go-up"><i class="pe-7s-angle-up"></i></div>
+<!-- IF DISPLAY_SHOWDEBUG -->
+<div class="text-center pt-10 pb-10">{DEBUG_OUTPUT}</div>
+<!-- ENDIF -->
+<div id="data-ajax-loader"></div>
+<!-- INCLUDE overall_javascript.html -->
+<script src="{TEMPLATE_URL}/assets/js/jquery.min.js"></script>
+<script src="{TEMPLATE_URL}/assets/js/bootstrap.min.js"></script>
+<script src="{TEMPLATE_URL}/assets/js/modernizr.min.js"></script>
+<script src="{TEMPLATE_URL}/assets/js/jquery.cookie.js"></script>
+<script src="{TEMPLATE_URL}/assets/js/jquery.easing.min.js"></script>
+<script src="{TEMPLATE_URL}/assets/js/jQuery.ajaxQueue.min.js"></script>
+<script src="{TEMPLATE_URL}/assets/js/owl.carousel.min.js"></script>
+<script src="{TEMPLATE_URL}/assets/js/ResizeSensor.min.js"></script>
+<script src="{TEMPLATE_URL}/assets/js/theia.sticky.sidebar.min.js"></script>
+<!-- IF IS_USER --><script src="{TEMPLATE_URL}/assets/js/users.js"></script><!-- ELSE --><script src="{TEMPLATE_URL}/assets/js/signup.js"></script><!-- ENDIF -->
+<!-- IF CLASS_HEADER eq 'jpinning' --><script src="{TEMPLATE_URL}/assets/js/jPinning.min.js"></script><!-- ENDIF -->
+<script src="{TEMPLATE_URL}/assets/js/custom.js"></script>
+{ENQUEUE_SCRIPT}{THOP_FOOTERCODE}
+<!-- IF THOP_COOKIE_STATUS  -->
+<script src="{TEMPLATE_URL}/assets/js/cookie.min.js"></script>
+<div class="cookie-box {THOP_COOKIE_POSITION}">
+    <div class="cookie-box-inner">
+        <img src="<!-- IF THOP_COOKIE_IMAGE -->{THOP_COOKIE_IMAGE}<!-- ELSE -->{TEMPLATE_URL}/assets/images/cookie.svg<!-- ENDIF -->" alt="cookie">
+        <div class="cookie-content">
+            <h3>{THOP_COOKIE_TITLE}</h3>
+            <p>{THOP_COOKIE_DESC}</p>
+            <div class="buttons">
+                <button class="button cookie-decline">{THOP_COOKIE_DECLINE}</button>
+                <button class="button cookie-consent loading">{THOP_COOKIE_CONSENT}</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ENDIF -->
+</body>
+</html>

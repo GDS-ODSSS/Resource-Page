@@ -1,0 +1,42 @@
+<!-- INCLUDE overall_header.html -->
+<section class="parallax-window" id="short">
+    <div id="sub_header">
+        <div class="container" id="sub_content">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{LANG_FREQUENTLY_ASKED_QUESTIONS}</h1>
+                    <div class="bread-crums">
+                        <a href="{SITE_URL}">{LANG_HOME}</a>
+                        <span class="bread-crums-span">&raquo;</span>
+                        <span class="current">{LANG_FAQS}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- INCLUDE banner_top.html -->
+<div class="container padding_80">
+    <div class="row">
+        <!-- IF THOP_SHOW_SIDEBAR && FAQOP_SIDEBAR && THOP_POSITION_SIDEBAR eq 'left' -->
+        <!-- INCLUDE faqs/sidebar_faqs.html -->
+        <!-- ENDIF -->
+        <div class="<!-- IF THOP_SHOW_SIDEBAR && FAQOP_SIDEBAR -->col-lg-9 col-md-8 col-sm-12<!-- ELSE -->col-md-12<!-- ENDIF -->">
+            
+            <div class="accordion toggle-accordion">
+                <!-- BEGIN loop_faqs -->
+                <div class="section-content">
+                    <h4 class="accordion-title"><a href="#">{loop_faqs.POST_TITLE}<i class="pe-7s-angle-down"></i></a></h4>
+                    <div class="accordion-inner">
+                        {loop_faqs.POST_CONTENT}
+                    </div>
+                </div>
+                <!-- END loop_faqs -->
+            </div>
+        </div>
+        <!-- IF THOP_SHOW_SIDEBAR && FAQOP_SIDEBAR && THOP_POSITION_SIDEBAR eq 'right' -->
+        <!-- INCLUDE faqs/sidebar_faqs.html -->
+        <!-- ENDIF -->
+    </div>
+</div>
+<!-- INCLUDE overall_footer.html -->

@@ -1,0 +1,35 @@
+<!-- IF HOME_NEWS -->
+<div class="padding_80 {NEWSOP_HOME_CLASS}">
+    <div class="container">
+        <div class="main_title">
+            <h2>{LANG_NEWS}</h2>
+            <span class="divider"></span>
+        </div>
+        <div class="row">
+            <!-- BEGIN loop_news -->
+            <div class="col-md-4 col-sm-6 col-12">
+                <div class="blog-grid">
+                    <div class="blog-grid-image">
+                        <a href="{loop_news.POST_PERMANETLINK}">
+                            <img src="{loop_news.POST_THUMB_M}" alt="article image">
+                        </a>
+                        <span class="meta-date">{loop_news.POST_MODIFIED}</span>
+                    </div>
+                    <h3 class="blog-grid-title">
+                        <a href="{loop_news.POST_PERMANETLINK}">{loop_news.POST_TITLE}</a>
+                    </h3>
+                    <p class="blog-grid-excerpt">{loop_news.POST_SHORT}</p>
+                </div>
+            </div>
+            <!-- END loop_news -->
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="home-more">
+                    <a href="{PERMALINK_NEWS}"><i class="<!-- IF NEWSOP_ICON -->{NEWSOP_ICON}<!-- ELSE -->fa fa-question-circle<!-- ENDIF -->"></i> <!-- IF NEWSOP_TEXT_LINK -->{NEWSOP_TEXT_LINK}<!-- ELSE -->{LANG_SEE_MORE}<!-- ENDIF --></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ENDIF -->

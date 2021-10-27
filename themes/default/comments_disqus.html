@@ -1,0 +1,11 @@
+<!-- IF POST_COMMENT_STATS && THOP_DISQUS_STATUS -->
+<div id="disqus_thread"></div>
+<script>
+    (function () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://{THOP_DISQUS_USERNAME}.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<!-- ENDIF -->

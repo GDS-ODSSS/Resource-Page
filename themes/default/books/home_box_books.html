@@ -1,0 +1,14 @@
+<!-- IF BOOKOP_BOX_HOME -->
+<div class="<!-- IF BOOKOP_COLUMN -->{BOOKOP_COLUMN}<!-- ELSE -->col-md-4<!-- ENDIF --> {BOOKOP_CLASSES}">
+    <div class="services color3">
+        <!-- IF BOOKOP_IMAGE -->
+        <div class="image"><img src="{BOOKOP_IMAGE}" /></div>
+        <!-- ELSE -->
+        <div class="icon"><i class="<!-- IF BOOKOP_ICON -->{BOOKOP_ICON}<!-- ELSE -->fa fa-life-ring<!-- ENDIF -->"></i></div>
+        <!-- ENDIF -->
+        <h4><a href="{PERMALINK_BOOKS}"><!-- IF BOOKOP_TITLE -->{BOOKOP_TITLE}<!-- ELSE -->{LANG_BOOKS}<!-- ENDIF --></a></h4>
+        <p class="description"><!-- IF BOOKOP_DESCRIPTION -->{BOOKOP_DESCRIPTION}<!-- ENDIF --></p>
+        <a class="link" href="{PERMALINK_BOOKS}"><!-- IF BOOKOP_TEXT_LINK -->{BOOKOP_TEXT_LINK}<!-- ELSE -->{LANG_SEE_MORE}<!-- ENDIF --></a>
+    </div>
+</div>
+<!-- ENDIF -->

@@ -1,0 +1,20 @@
+<!-- INCLUDE overall_header.html --><!-- IF THOP_SUB_HEADER_STYLE eq '1' -->
+<!-- INCLUDE home/sub_header_style1.html --><!-- ELSEIF THOP_SUB_HEADER_STYLE eq '2' -->
+<!-- INCLUDE home/sub_header_style2.html --><!-- ELSEIF THOP_SUB_HEADER_STYLE eq '3' -->
+<!-- INCLUDE home/sub_header_style3.html --><!-- ELSEIF THOP_SUB_HEADER_STYLE eq '4' -->
+<!-- INCLUDE home/sub_header_style4.html --><!-- ELSE --><!-- INCLUDE home/sub_header_style1.html --><!-- ENDIF -->
+<!-- IF THOP_BOXS_STATUS -->
+<div class="padding_80 {THOP_BOXS_CLASS}">
+    <div class="container">
+        <div class="main_title">
+            <h2>{THOP_BOXS_TITLE}</h2>
+            <span class="divider"></span>
+        </div>
+        <div class="row">
+            <!-- BEGIN !loop_boxs_home --><!-- END loop_boxs_home -->
+        </div>
+    </div>
+</div>
+<!-- ENDIF -->
+<!-- BEGIN !!loop_section_home --><!-- END loop_section_home -->
+<!-- INCLUDE overall_footer.html -->

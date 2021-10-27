@@ -1,0 +1,22 @@
+<div class="padding_80 {TESTIMONIALS_HOME_CLASS}">
+    <div class="container">
+        <!-- IF TESTIMONIALS_TITLE -->
+        <div class="main_title">
+            <h2>{TESTIMONIALS_TITLE}</h2>
+            <!-- IF TESTIMONIALS_DESCRIPTION --><p>{TESTIMONIALS_DESCRIPTION}</p><!-- ENDIF -->
+            <span class="divider"></span>
+        </div>
+        <!-- ENDIF -->
+        <div class="row">
+            <!-- IF TESTIMONIALS_STYLE eq '2' -->
+            <!-- INCLUDE testimonials/loop_testimonials_style2.html -->
+            <!-- ELSE -->
+            <div class="col-md-12">
+                <div class="owl-carousel owl-testimonial">
+                    <!-- INCLUDE testimonials/loop_testimonials_style1.html -->
+                </div>
+            </div>
+        <!-- ENDIF -->
+        </div>
+    </div>
+</div>

@@ -1,0 +1,77 @@
+<header class="header5" id="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="site-brand">
+                    <a class="logo" href="{SITE_URL}">
+                        <!-- IF IS_MOBILE && THOP_LOGOMOBILE -->
+                        <img src="{THOP_LOGOMOBILE}" alt="{SITE_NAME}">
+                        <!-- ELSE -->
+                        <img src="<!-- IF THOP_LOGO -->{THOP_LOGO}<!-- ELSE -->{TEMPLATE_URL}/assets/images/logo{THOP_LOGOCOLOR}.png<!-- ENDIF -->" alt="{SITE_NAME}">
+                        <!-- ENDIF -->
+                    </a>
+                </div>
+                <ul class="links">
+                    <li><a href="tel:{THOP_PHONE}"><i class="pe-7s-call"></i><span>{THOP_PHONE}</span></a></li>
+                    <li><a href="mailto:{THOP_EMAIL}"><i class="pe-7s-mail"></i><span>{THOP_EMAIL}</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <!-- IF USERLINK_HEADER -->
+                <ul class="navuser">
+                    <!-- IF IS_USER -->
+                    <li>
+                        <a href="#"><i class="pe-7s-user"></i> <span>{LANG_HOWDY} {USER_NAME}</span></a>
+                        <ul class="menu-user">
+                            <!-- IF IS_USER_ADMIN -->
+                            <li><a href="{PERMALINK_ADMIN_DASHBOARD}"><i class="pe-7s-edit"></i> {LANG_DASHBOARD}</a></li>
+                            <!-- ENDIF -->
+                            <li><a href="{PERMALINK_USER_PROFILE}"><i class="pe-7s-id"></i>  {LANG_PROFILE}</a></li>
+                            <li><a href="{PERMALINK_SIGNOUT}" onclick="return confirm('{LANG_DO_YOU_LOGOUT}');"><i class="pe-7s-power"></i>  {LANG_SIGNOUT}</a></li>
+                        </ul>
+                    </li>
+                    <!-- ELSE -->
+                    <li><a href="{PERMALINK_SIGNIN}" class="button-singin"><i class="pe-7s-unlock"></i><span>{LANG_SIGNIN}</span></a></li>
+                   <!--<li><a href="{PERMALINK_SIGNUP}" class="button-singup"><i class="pe-7s-lock"></i><span>{LANG_SIGNUP}</span></a></li>-->
+                    <!-- ENDIF -->
+                </ul>
+                <!-- ENDIF -->
+                <a class="toggle-switch open_close" href="javascript:void(0);"><span>Menu mobile</span></a>
+                <nav class="main-menu menu-icons" id="main-menu">
+                    <a href="javascript:void(0);" class="open_close" id="close_in"><i class="pe-7s-close"></i></a>
+                    <div id="header_menu">
+                        <!-- IF IS_MOBILE && THOP_LOGOMOBILE -->
+                        <img src="{THOP_LOGOMOBILE}" alt="{SITE_NAME}">
+                        <!-- ELSE -->
+                        <img src="<!-- IF THOP_LOGO -->{THOP_LOGO}<!-- ELSE -->{TEMPLATE_URL}/assets/images/logo{THOP_LOGOCOLOR}.png<!-- ENDIF -->" alt="{SITE_NAME}">
+                        <!-- ENDIF -->
+                    </div>
+                    <ul>
+                        <!-- BEGIN loop_main_menu -->
+                        <li <!-- IF loop_main_menu.MENU_SUB_COUNT -->class="submenu"<!-- ENDIF -->>
+                            <a href="<!-- IF loop_main_menu.MENU_SUB_COUNT -->javascript:void(0);<!-- ELSE -->{loop_main_menu.MENU_URL}<!-- ENDIF -->" {loop_main_menu.URL_TARGET} <!-- IF loop_main_menu.MENU_SUB_COUNT -->class="show-submenu"<!-- ENDIF -->>
+                                <!-- IF loop_main_menu.MENU_ICON --><i class="{loop_main_menu.MENU_ICON}"></i><!-- ENDIF --> 
+                                <!-- IF loop_main_menu.MENU_IMAGE --><i><img src="{loop_main_menu.MENU_IMAGE}" /></i><!-- ENDIF --> 
+                                {loop_main_menu.MENU_TITLE}
+                            </a>
+                            <!-- BEGIN loop_main_menu_sub -->
+                            <!-- IF loop_main_menu_sub.SUB_NUM eq '1' --><ul class=""><!-- ENDIF -->
+                            <li>
+                                <a href="{loop_main_menu_sub.MENU_URL}" {loop_main_menu_sub.URL_TARGET}>
+                                <!-- IF loop_main_menu_sub.MENU_ICON --><i class="{loop_main_menu_sub.MENU_ICON}"></i><!-- ENDIF --> 
+                                <!-- IF loop_main_menu_sub.MENU_IMAGE --><i><img src="{loop_main_menu_sub.MENU_IMAGE}" /></i><!-- ENDIF --> 
+                                {loop_main_menu_sub.MENU_TITLE}
+                                </a>
+                            </li>
+                            <!-- IF loop_main_menu_sub.SUB_NUM eq loop_main_menu.MENU_SUB_COUNT --></ul><!-- ENDIF -->
+                            <!-- END loop_main_menu_sub -->
+                        </li>
+                        <!-- END loop_main_menu -->
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>

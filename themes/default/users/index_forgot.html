@@ -1,0 +1,67 @@
+<!-- INCLUDE overall_header.html -->
+<section class="parallax-window" id="short">
+    <div id="sub_header">
+        <div class="container" id="sub_content">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{LANG_RECOVER_ACCOUNT}</h1>
+                    <div class="bread-crums">
+                        <a href="{SITE_URL}">{LANG_HOME}</a>
+                        <span class="bread-crums-span">&raquo;</span>
+                        <span class="current">{LANG_RECOVER_ACCOUNT}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- INCLUDE banner_top.html -->
+<section>
+    <div class="container padding_80">
+        <div class="row">
+            <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h4 class="mb-0 text-center">{LANG_RECOVER_ACCOUNT}</h4>
+                    </div>
+                    <div class="card-body">
+                        <!-- IF FORGOT_ERROR eq 'sendkey' -->
+                        <div class="form-messeges done">
+                            <div class="messege-warp">
+                                <span class="messege-text"><i class="fa fa-check"></i> {LANG_SENDING_PASSWORD_RESET_LINKS_IN_EMAIL}</span>
+                            </div>
+                        </div>
+                        <!-- ELSEIF FORGOT_ERROR eq 'email_required' -->
+                        <div class="form-messeges warning">
+                            <div class="messege-warp">
+                                <span class="messege-text"><i class="fa fa-exclamation-circle"></i> {LANG_EMAIL_FIELD_IS_REQUIRED}</span>
+                            </div>
+                        </div>
+                        <!-- ELSEIF FORGOT_ERROR eq 'error' -->
+                        <div class="form-messeges error">
+                            <div class="messege-warp">
+                                <span class="messege-text"><i class="fa fa-exclamation-circle"></i> {LANG_SORRY_EMAIL_IS_NOT_REGISTERED_OUR}</span>
+                            </div>
+                        </div>
+                        <!-- ENDIF -->
+                        <!-- IF FORGOT_FORM -->
+                        <form name="forgetpasswordform" id="forgetpasswordform" role="form" action="{PERMALINK_FORGOT}" method="post">
+                            <input type="hidden" name="action" value="forgetpassword" />
+                            <input type="hidden" name="token" value="{TOKEN}" />
+                            <div class="form-group">
+                                <label for="emailaddress">{LANG_EMAIL_ADDRESS}</label>
+                                <input class="form-control " type="email" name="email" id="emailaddress" value="" required="" autocomplete="email" autofocus="" placeholder="{LANG_EMAIL_ADDRESS}">
+                            </div>
+                            <div class="form-group text-center">
+                                <button class="button btn-block" type="submit"> {LANG_FORGOT_PASSWORD} </button>
+                            </div>
+                        </form>
+                        <!-- ENDIF -->
+                        <div class="text-center">{LANG_BACK_TO} &nbsp;<a href="{PERMALINK_SIGNIN}">{LANG_SIGNIN}</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- INCLUDE overall_footer.html -->

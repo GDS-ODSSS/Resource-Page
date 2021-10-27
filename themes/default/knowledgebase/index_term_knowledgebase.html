@@ -1,0 +1,69 @@
+<!-- INCLUDE overall_header.html -->
+<section class="parallax-window" id="short">
+    <div id="sub_header">
+        <div class="container padding_80" id="sub_content">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{LANG_KNOWLEDGEBASE}</h1>
+                    <div class="bread-crums">
+                        <a href="{SITE_URL}">{LANG_HOME}</a>
+                        <span class="bread-crums-span">&raquo;</span>
+                        <a href="{PERMALINK_KNOWLEDGEBASE}">{LANG_KNOWLEDGEBASE}</a>
+                        <span class="bread-crums-span">&raquo;</span>
+                        <span class="current">{CATEGORIES_TITLE}</span>
+                    </div>
+                    <div class="custom-search-input">
+                        <form method="get" action="{SITE_URL}/knowledgebase">
+                            <div class="input-group">
+                                <i class="fas fa-search"></i>
+                                <input type="text" name="search" id="search" class="search-query" placeholder="{THOP_SUB_HEADER_SEARCH_TEXT}" value="{SEARCH_TXT}" />
+                                <input type="submit" value="{LANG_SEARCH}">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- INCLUDE banner_top.html -->
+<div class="container padding_80">
+    <div class="row">
+        <!-- IF THOP_SHOW_SIDEBAR && KNOWOP_SIDEBAR && THOP_POSITION_SIDEBAR eq 'left' -->
+        <!-- INCLUDE knowledgebase/sidebar_knowledgebase.html -->
+        <!-- ENDIF -->
+        <div class="<!-- IF THOP_SHOW_SIDEBAR && KNOWOP_SIDEBAR -->col-lg-9 col-md-8 col-sm-12<!-- ELSE -->col-md-12<!-- ENDIF -->">
+            <div class="head-title">
+                <!-- IF THE_CATEGORIE_ID -->
+                <h4>{CATEGORIES_TITLE}</h4>
+                <!-- ELSEIF IS_SEARCH -->
+                <h4>{LANG_SEARCH} : <small>{SEARCH_TXT}</small></h4>
+                <!-- ELSE -->
+                <h4>{LANG_KNOWLEDGEBASE}</h4>
+                <!-- ENDIF -->
+            </div>
+            <!-- IF IS_SEARCH && SEARCH_FOUND eq '0' -->
+            <div class="alert alert-warning text-center" role="alert">{LANG_NOT_FOUND}!</div>
+            <!-- ENDIF -->
+            
+            <ul class="knowledgebase-list">
+            <!-- BEGIN loop_knowledgebase -->
+                <li>
+                    <h4><a href="{loop_knowledgebase.POST_PERMANETLINK}">{loop_knowledgebase.POST_TITLE}</a></h4>
+                    <div class="post-meta">
+                        <span class="meta-author"><i class="pe-7s-user"></i> {loop_knowledgebase.POST_AUTHOR}</span>
+                        <span class="meta-comment"><i class="pe-7s-look"></i> {loop_knowledgebase.POST_VIEW} {LANG_VIEWS}</span>
+                        <span class="meta-date"><i class="pe-7s-date"></i> <a href="#">{loop_knowledgebase.POST_TIME_AGO}</a></span>
+                        <span class="meta-categories"><i class="pe-7s-ticket"></i> <a href="{loop_knowledgebase.POST_TERM_PERMANETLINK}">{loop_knowledgebase.POST_TERM_NAME}</a></span>
+                    </div>
+                </li>
+            <!-- END loop_knowledgebase -->
+            </ul>
+            <!-- IF SHOW_PAGINATION --><nav class="navigation pagination"><div class="nav-links">{PAGINATION}</div></nav><!-- ENDIF -->
+        </div>
+        <!-- IF THOP_SHOW_SIDEBAR && KNOWOP_SIDEBAR && THOP_POSITION_SIDEBAR eq 'right' -->
+        <!-- INCLUDE knowledgebase/sidebar_knowledgebase.html -->
+        <!-- ENDIF -->
+    </div>
+</div>
+<!-- INCLUDE overall_footer.html -->

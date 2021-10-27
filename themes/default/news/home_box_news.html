@@ -1,0 +1,14 @@
+<!-- IF NEWSOP_BOX_HOME -->
+<div class="<!-- IF NEWSOP_COLUMN -->{NEWSOP_COLUMN}<!-- ELSE -->col-md-4<!-- ENDIF --> {NEWSOP_CLASSES}">
+    <div class="services color5">
+        <!-- IF NEWSOP_IMAGE -->
+        <div class="image"><img src="{NEWSOP_IMAGE}" /></div>
+        <!-- ELSE -->
+        <div class="icon"><i class="<!-- IF NEWSOP_ICON -->{NEWSOP_ICON}<!-- ELSE -->fa fa-question-circle<!-- ENDIF -->"></i></div>
+        <!-- ENDIF -->
+        <h4><a href="{PERMALINK_NEWS}"><!-- IF NEWSOP_TITLE -->{NEWSOP_TITLE}<!-- ELSE -->{LANG_NEWS}<!-- ENDIF --></a></h4>
+        <p class="description"><!-- IF NEWSOP_DESCRIPTION -->{NEWSOP_DESCRIPTION}<!-- ENDIF --></p>
+        <a class="link" href="{PERMALINK_NEWS}"><!-- IF NEWSOP_TEXT_LINK -->{NEWSOP_TEXT_LINK}<!-- ELSE -->{LANG_SEE_MORE}<!-- ENDIF --></a>
+    </div>
+</div>
+<!-- ENDIF -->

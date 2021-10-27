@@ -1,0 +1,24 @@
+<div class="row">
+    <!-- BEGIN loop_team -->
+    <div class="col-md-3 col-sm-6 col-12">
+        <div class="box-team-style3">
+            <div class="avatar">
+                <img src="{loop_team.POST_THUMB}" alt="{loop_team.POST_TITLE}">
+                <div class="team-hover">
+                    <div class="socials-ul">
+                        <ul>
+                            <!-- IF loop_team.POST_FACEBOOK --><li class="facebook"><a href="{loop_team.POST_FACEBOOK}" target="_blank"><i class="fab fa-facebook-f"></i></a></li><!-- ENDIF -->
+                            <!-- IF loop_team.POST_TWITTER --><li class="twitter"><a href="{loop_team.POST_TWITTER}" target="_blank"><i class="fab fa-twitter"></i></a></li><!-- ENDIF -->
+                            <!-- IF loop_team.POST_INSTAGRAM --><li class="instagram"><a href="{loop_team.POST_INSTAGRAM}" target="_blank"><i class="fab fa-instagram"></i></a></li><!-- ENDIF -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="team-info">
+                <h3 class="team-name">{loop_team.POST_TITLE}</h3>
+                <span class="team-job">{loop_team.POST_JOB}</span>
+            </div>
+        </div>
+    </div>
+    <!-- END loop_team -->
+</div>

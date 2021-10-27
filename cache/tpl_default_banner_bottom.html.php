@@ -1,0 +1,1 @@
+<?php if (!defined('IN_PHPMEGATEMP')) exit; if ($this->_rootref['THOP_BANNERBOTTOM']) {  ?><div class="container mb-30"><div class="row"><div class="col-md-12 text-center"><?php echo (isset($this->_rootref['THOP_BANNERBOTTOM'])) ? $this->_rootref['THOP_BANNERBOTTOM'] : ''; ?></div></div></div><?php } ?>

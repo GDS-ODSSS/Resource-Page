@@ -1,0 +1,11 @@
+/***************************************************************************|
+ * Project:      Creative upload plugins                                    |
+ * File:         media-upload.php                                           |
+//--------------------------------------------------------------------------|
+ * @link http://nawaaugustine.com/                                            |
+ * @copyright 2017.                                                         |
+ * @author Augustine Nawa <ocjpnawa@gmail.com>  |
+ * @version 3.0                                                             |
+//--------------------------------------------------------------------------|
+****************************************************************************/
+.cmp-gallery,.cmp-preview{margin: 20px 10px;text-align:left;float: left;clear:both;position:relative;line-height:0;display:none;max-width: 100%;max-height: 220px;padding: 5px;}.cmp-gallery img,.cmp-preview img{max-width:100%;max-height: 190px;}.cmp-preview{border: 2px solid #CCC;}.cmp-gallery{border:1px dashed #888;background:url(../images/gallery.png) center center no-repeat #f2f8ff;width:99%;height:250px}.cmp-gallery .icon-remove,.cmp-preview .icon-remove{position:absolute;left:-10px;top:-10px;background:url(../images/delete.png) top no-repeat;width:20px;height:20px;cursor:pointer}

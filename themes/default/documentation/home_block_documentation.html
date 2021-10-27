@@ -1,0 +1,46 @@
+<!-- IF HOME_DOCUMENTATION -->
+<div class="padding_80 {DOCUOP_HOME_CLASS}">
+    <div class="container">
+        <div class="main_title">
+            <h2>{LANG_DOCUMENTATION}</h2>
+            <span class="divider"></span>
+        </div>
+        <div class="row">
+            <!-- BEGIN loop_documentation -->
+            <div class="col-md-6 col-sm-6 col-12">
+                <div class="document-item">
+                    <h5><a href="{loop_documentation.POST_PERMANETLINK}"><!-- IF loop_documentation.POST_PIN_POST --><i class="fa fa-bolt post_pin"></i><!-- ENDIF --> {loop_documentation.POST_TITLE}</a></h5>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <i class="pe-7s-user"></i> {loop_documentation.POST_AUTHOR}
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <i class="pe-7s-ticket"></i> <a href="{loop_documentation.POST_TERM_PERMANETLINK}">{loop_documentation.POST_TERM_NAME}</a>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <i class="pe-7s-clock"></i> {loop_documentation.POST_MODIFIED}
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <i class="pe-7s-anchor"></i> {LANG_VERSION} {loop_documentation.POST_VERSION}
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <i class="pe-7s-notebook"></i> <a target="_blank" href="{loop_documentation.POST_ONLINEDOCUMENT}">{LANG_ONLINE_DOCUMENT}</a>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <i class="pe-7s-cloud-download"></i> <a target="_blank" href="{loop_documentation.POST_DOWNLOAD}">{LANG_DOWNLOAD}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END loop_documentation -->
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="home-more">
+                    <a href="{PERMALINK_DOCUMENTATION}"><i class="<!-- IF DOCUOP_ICON -->{DOCUOP_ICON}<!-- ELSE -->fa fa-files-o<!-- ENDIF -->"></i> <!-- IF DOCUOP_TEXT_LINK -->{DOCUOP_TEXT_LINK}<!-- ELSE -->{LANG_VIEW_DOCUMENTATION}<!-- ENDIF --></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ENDIF -->

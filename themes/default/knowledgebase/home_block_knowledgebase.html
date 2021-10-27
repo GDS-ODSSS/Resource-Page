@@ -1,0 +1,32 @@
+<!-- IF HOME_KNOWLEDGEBASE -->
+<div class="padding_80 {KNOWOP_HOME_CLASS}">
+    <div class="container">
+        <div class="main_title">
+            <h2>{LANG_KNOWLEDGEBASE}</h2>
+            <span class="divider"></span>
+        </div>
+        <div class="row">
+            <!-- BEGIN terms_knowledgebase -->
+            <div class="col-md-6 col-sm-12">
+                <div class="topics-list">
+                    <h5><a href="{terms_knowledgebase.TERM_PERMANENT_LINK}">{terms_knowledgebase.TERM_NAME} <span class="badge">{terms_knowledgebase.TERM_COUNT_POSTS}</span></a></h5>
+                    <ul>
+                        <!-- BEGIN loop_knowledgebase --> 
+                        <li><a href="{loop_knowledgebase.POST_PERMANETLINK}"><i class="pe-7s-note2"></i> {loop_knowledgebase.POST_TITLE}</a></li>
+                        <!-- END loop_knowledgebase -->
+                    </ul>
+                    <a href="{terms_knowledgebase.TERM_PERMANENT_LINK}" class="readmore">{LANG_VIEW_ALL} <i class="fas fa-angle-right"></i></a>
+                </div>
+            </div>
+            <!-- END terms_knowledgebase -->
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="home-more">
+                    <a href="{PERMALINK_KNOWLEDGEBASE}"><i class="<!-- IF KNOWOP_ICON -->{KNOWOP_ICON}<!-- ELSE -->fa fa-life-ring<!-- ENDIF -->"></i> <!-- IF KNOWOP_TEXT_LINK -->{KNOWOP_TEXT_LINK}<!-- ELSE -->{LANG_CHECK_AN_ARTICLE}<!-- ENDIF --></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ENDIF -->

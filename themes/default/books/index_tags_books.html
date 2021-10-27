@@ -1,0 +1,57 @@
+<!-- INCLUDE overall_header.html -->
+
+<section class="parallax-window" id="short">
+    <div id="sub_header">
+        <div class="container" id="sub_content">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{LANG_BOOKS}</h1>
+                    <div class="bread-crums">
+                        <a href="{SITE_URL}">{LANG_HOME}</a>
+                        <span class="bread-crums-span">&raquo;</span>
+                        <a href="{PERMALINK_BOOKS}">{LANG_BOOKS}</a>
+                        <span class="bread-crums-span">&raquo;</span>
+                        <span class="current">{LANG_TAGS} : {TAG_NAME}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- INCLUDE banner_top.html -->
+<div class="container padding_80">
+    <div class="row">
+        <!-- IF THOP_SHOW_SIDEBAR && BOOKOP_SIDEBAR && THOP_POSITION_SIDEBAR eq 'left' -->
+        <!-- INCLUDE books/sidebar_books.html -->
+        <!-- ENDIF -->
+        <div class="<!-- IF THOP_SHOW_SIDEBAR && BOOKOP_SIDEBAR -->col-lg-9 col-md-8 col-sm-12<!-- ELSE -->col-md-12<!-- ENDIF -->">
+            <div class="head-title">
+                <h4>{LANG_TAGS} : <small>{TAG_NAME}</small></h4>
+            </div>
+            <div class="row">
+                <!-- BEGIN loop_books -->
+                <div class="col-md-6">
+                    <div class="book-grid-item">
+                        <a href="{loop_books.POST_PERMANETLINK}"><img src="{loop_books.POST_THUMB}" class="book-grid-cover" alt="book cover"></a>
+                        <div class="book-grid-meta">
+                            <h4 class="book-grid-title"><a href="{loop_books.POST_PERMANETLINK}">{loop_books.POST_TITLE}</a></h4>
+                            <p class="grid-details"><strong>{LANG_BY}:</strong> {loop_books.POST_BOOK_AUTHOR}</p>
+                            <p class="grid-details"><strong>{LANG_YEAR}:</strong> {loop_books.POST_BOOK_YEAR}</p>
+                            <p class="grid-details"><strong>{LANG_TYPE}:</strong> {loop_books.POST_BOOK_TYPE}</p>
+                            <p class="grid-details"><strong>{LANG_PAPERBACK}:</strong> {loop_books.POST_BOOK_PAPERBACK} {LANG_PAGES}</p>
+                            <p class="grid-details"><strong>{LANG_PRICE}:</strong> {loop_books.POST_BOOK_PRICE}</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- END loop_books -->
+            </div>
+            <!-- IF SHOW_PAGINATION -->
+            <nav class="navigation pagination"><div class="nav-links">{PAGINATION}</div></nav>
+            <!-- ENDIF -->
+        </div>
+        <!-- IF THOP_SHOW_SIDEBAR && BOOKOP_SIDEBAR && THOP_POSITION_SIDEBAR eq 'right' -->
+        <!-- INCLUDE books/sidebar_books.html -->
+        <!-- ENDIF -->
+    </div>
+</div>
+<!-- INCLUDE overall_footer.html -->

@@ -1,0 +1,60 @@
+<aside class="col-lg-3 col-md-4 col-sm-12 sidebar sticky-sidebar">
+    <div class="theiaStickySidebar">
+        <!-- INCLUDE banner_sidebar.html -->
+        <!-- IF DOCUOP_WIDGET_SEARCH -->
+        <div class="widget widget-search-input">
+            <div class="widget-title"><i class="pe-7s-search"></i> {LANG_SEARCH}</div>
+            <form action="{SITE_URL}/documentation" method="get">
+                <div class="box-input">
+                    <input class="input" type="text" name="search" placeholder="<!-- IF DOCUOP_SEARCH_TEXT -->{DOCUOP_SEARCH_TEXT}<!-- ELSE -->{THOP_SUB_HEADER_SEARCH_TEXT}<!-- ENDIF -->" maxlength="50" value="{SEARCH_TXT}">
+                </div>
+            </form>
+        </div>
+        <!-- ENDIF -->
+        <!-- IF DOCUOP_WIDGET_CATEGORIES -->
+        <div class="widget widget-list">
+            <div class="widget-title"><i class="pe-7s-ticket"></i> {LANG_CATEGORIES}</div>
+            <ul>
+                <!-- BEGIN terms_documentation -->
+                <li class="cat-item <!-- IF terms_documentation.TERM_ID eq THE_CATEGORIE_ID -->active<!-- ENDIF -->">
+					<a href="{terms_documentation.TERM_PERMANENT_LINK}">
+						{terms_documentation.TERM_NAME}
+						<span class="count">{terms_documentation.TERM_COUNT_POSTS}</span>
+					</a>
+				</li>
+                <!-- END terms_documentation -->
+            </ul>
+        </div>
+        <!-- ENDIF -->
+        <!-- IF DOCUOP_WIDGET_RECENT -->
+        <div class="widget widget-list">
+            <div class="widget-title"><i class="pe-7s-gleam"></i> {LANG_RECENT}</div>
+            <ul>
+                <!-- BEGIN loop_recent_documentation -->
+                <li><a href="{loop_recent_documentation.POST_PERMANETLINK}">{loop_recent_documentation.POST_TITLE}</a></li>
+                <!-- END loop_recent_documentation -->
+            </ul>
+        </div>
+        <!-- ENDIF -->
+        <!-- IF DOCUOP_WIDGET_POPULAR -->
+        <div class="widget widget-list">
+            <div class="widget-title"><i class="pe-7s-like"></i> {LANG_POPULAR}</div>
+            <ul>
+                <!-- BEGIN loop_popular_documentation -->
+                <li><a href="{loop_popular_documentation.POST_PERMANETLINK}">{loop_popular_documentation.POST_TITLE}</a></li>
+                <!-- END loop_popular_documentation -->
+            </ul>
+        </div>
+        <!-- ENDIF -->
+        <!-- IF DOCUOP_WIDGET_TAGS -->
+        <div class="widget widget-list">
+            <div class="widget-title"><i class="pe-7s-ticket"></i> {LANG_TAGS}</div>
+            <div class="post-tags">
+                <!-- BEGIN loop_widget_tags -->
+                <a href="{loop_widget_tags.TAG_LINK}">{loop_widget_tags.TAG_NAME} ({loop_widget_tags.TAG_COUNT})</a>
+                <!-- END loop_widget_tags -->
+            </div>
+        </div>
+        <!-- ENDIF -->
+    </div>
+</aside>

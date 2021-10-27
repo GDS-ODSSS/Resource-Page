@@ -1,0 +1,34 @@
+<!-- IF HOME_BOOKS -->
+<div class="padding_80 {BOOKOP_HOME_CLASS}">
+    <div class="container">
+        <div class="main_title">
+            <h2>{LANG_BOOKS}</h2>
+            <span class="divider"></span>
+        </div>
+        <div class="row">
+            <!-- BEGIN loop_books -->
+            <div class="col-md-6">
+                <div class="book-grid-item">
+                    <a href="{loop_books.POST_PERMANETLINK}"><img src="{loop_books.POST_THUMB}" class="book-grid-cover" alt="book cover"></a>
+                    <div class="book-grid-meta">
+                        <h4 class="book-grid-title"><a href="{loop_books.POST_PERMANETLINK}">{loop_books.POST_TITLE}</a></h4>
+                        <p class="grid-details"><strong>{LANG_BY}:</strong> {loop_books.POST_BOOK_AUTHOR}</p>
+                        <p class="grid-details"><strong>{LANG_YEAR}:</strong> {loop_books.POST_BOOK_YEAR}</p>
+                        <p class="grid-details"><strong>{LANG_TYPE}:</strong> {loop_books.POST_BOOK_TYPE}</p>
+                        <p class="grid-details"><strong>{LANG_PAPERBACK}:</strong> {loop_books.POST_BOOK_PAPERBACK} {LANG_PAGES}</p>
+                        <p class="grid-details"><strong>{LANG_PRICE}:</strong> {loop_books.POST_BOOK_PRICE}</p>
+                    </div>
+                </div>
+            </div>
+            <!-- END loop_books -->
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="home-more">
+                    <a href="{PERMALINK_BOOKS}"><i class="<!-- IF BOOKOP_ICON -->{BOOKOP_ICON}<!-- ELSE -->fa fa-life-ring<!-- ENDIF -->"></i> <!-- IF BOOKOP_TEXT_LINK -->{BOOKOP_TEXT_LINK}<!-- ELSE -->{LANG_SEE_MORE}<!-- ENDIF --></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ENDIF -->

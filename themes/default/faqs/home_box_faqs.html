@@ -1,0 +1,14 @@
+<!-- IF FAQOP_BOX_HOME -->
+<div class="<!-- IF FAQOP_COLUMN -->{FAQOP_COLUMN}<!-- ELSE -->col-md-4<!-- ENDIF --> {FAQOP_CLASSES}">
+    <div class="services color4">
+        <!-- IF FAQOP_IMAGE -->
+        <div class="image"><img src="{FAQOP_IMAGE}" /></div>
+        <!-- ELSE -->
+        <div class="icon"><i class="<!-- IF FAQOP_ICON -->{FAQOP_ICON}<!-- ELSE -->fa fa-question-circle<!-- ENDIF -->"></i></div>
+        <!-- ENDIF -->
+        <h4><a href="{PERMALINK_FAQS}"><!-- IF FAQOP_TITLE -->{FAQOP_TITLE}<!-- ELSE -->{LANG_FREQUENTLY_ASKED_QUESTIONS}<!-- ENDIF --></a></h4>
+        <p class="description"><!-- IF FAQOP_DESCRIPTION -->{FAQOP_DESCRIPTION}<!-- ENDIF --></p>
+        <a class="link" href="{PERMALINK_FAQS}"><!-- IF FAQOP_TEXT_LINK -->{FAQOP_TEXT_LINK}<!-- ELSE -->{LANG_SEE_ANSWERS}<!-- ENDIF --></a>
+    </div>
+</div>
+<!-- ENDIF -->

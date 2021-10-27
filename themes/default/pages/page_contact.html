@@ -1,0 +1,84 @@
+<!-- INCLUDE overall_header.html -->
+<section class="parallax-window" id="short">
+    <div id="sub_header">
+        <div class="container" id="sub_content">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{POST_TITLE}</h1>
+                    <div class="bread-crums">
+                        <a href="{SITE_URL}">{LANG_HOME}</a>
+                        <span class="bread-crums-span">&raquo;</span>
+                        <span class="current">{POST_TITLE}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- INCLUDE banner_top.html -->
+<div class="container padding_80">
+    <!-- IF THOP_GOOGLEMAP -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="contact-iframe"><iframe height="480" src="{THOP_GOOGLEMAP}"></iframe></div>
+            <div class="gap"></div>
+            <div class="gap"></div>
+        </div>
+    </div>
+    <!-- ENDIF -->
+    <div class="row">
+        <div class="col-lg-8 col-md-7 col-sm-12">
+            <div class="head-title"><h4>{LANG_CONTACT_SUPPORT}</h4></div>
+            <div class="contact-form">
+                <form method="post" id="form-submit-content" class="" action="" role="form">
+                    <input type="hidden" name="action" value="submitcontent" />
+                    <input type="hidden" name="token" value="{TOKEN}" />
+                    <div class="form-group">
+                        <div class="frm-input frm-icon">
+                            <i class="far fa-user"></i>
+                            <input type="text" name="username" id="username" class="input" placeholder="{LANG_USERNAME}" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="frm-input frm-icon">
+                            <i class="far fa-envelope"></i>
+                            <input type="email" name="email" id="email" class="input" placeholder="{LANG_EMAIL_ADDRESS}" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="frm-input frm-icon">
+                            <i class="fas fa-tag"></i>
+                            <input type="text" name="subject" id="subject" class="input" placeholder="{LANG_SUBJECT}" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="frm-input frm-icon">
+                            <textarea name="message" rows="6" id="message" class="form-control height-sm" placeholder="{LANG_MESSAGE}"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" id="button-submit-content" class="button"><span></span> {LANG_SEND_MESSAGE}</button>
+                        <div id="message-content" class="alert alert-success" role="alert"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-5 col-sm-12 sidebar">
+            <!-- contact information -->
+            <div class="head-title"><h4>{LANG_WAYS_TO_GET_IN_TOUCH}</h4></div>
+            <div class="contact-information">
+                <ul>
+                    <li><i class="pe-7s-call"></i> <span>{THOP_PHONE}</span></li>
+                    <li><i class="pe-7s-print"></i> <span>{THOP_FAX}</span></li>
+                    <li><i class="pe-7s-mail"></i> <span>{THOP_EMAIL}</span></li>
+                </ul>
+            </div><!-- end contact information -->
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <!-- INCLUDE comments_disqus.html -->
+        </div>
+    </div>
+</div>
+<!-- INCLUDE overall_footer.html -->

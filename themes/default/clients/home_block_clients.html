@@ -1,0 +1,44 @@
+<div class="padding_80 {CLIENTS_HOME_CLASS}">
+    <div class="container">
+        <!-- IF CLIENTS_TITLE -->
+        <div class="main_title">
+            <h2>{CLIENTS_TITLE}</h2>
+            <!-- IF CLIENTS_DESCRIPTION --><p>{CLIENTS_DESCRIPTION}</p><!-- ENDIF -->
+            <span class="divider"></span>
+        </div>
+        <!-- ENDIF -->
+        <!-- IF CLIENTS_STYLE eq '1' -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="owl-carousel owl-clients">
+                    <!-- BEGIN loop_clients -->
+                    <div class="item">
+                        <div class="client">
+                            <!-- IF loop_clients.POST_URL -->
+                            <a href="{loop_clients.POST_URL}" target="_blank"><img src="{loop_clients.POST_THUMB}" class="img-responsive" alt="{loop_clients.POST_TITLE}"></a>
+                            <!-- ELSE -->
+                            <img src="{loop_clients.POST_THUMB}" class="img-responsive" alt="{loop_clients.POST_TITLE}">
+                            <!-- ENDIF -->
+                        </div>
+                    </div>
+                    <!-- END loop_clients -->
+                </div>
+            </div>
+        </div>
+        <!-- ELSE -->
+        <div class="row no-gutters clients-wrap">
+            <!-- BEGIN loop_clients -->
+            <div class="col-lg-3 col-md-4 col-xs-6">
+                <div class="client-logo">
+                    <!-- IF loop_clients.POST_URL -->
+                    <a href="{loop_clients.POST_URL}" target="_blank"><img src="{loop_clients.POST_THUMB}" class="img-responsive" alt="{loop_clients.POST_TITLE}"></a>
+                    <!-- ELSE -->
+                    <img src="{loop_clients.POST_THUMB}" class="img-responsive" alt="{loop_clients.POST_TITLE}">
+                    <!-- ENDIF -->
+                </div>
+            </div>
+            <!-- END loop_clients -->
+        </div>
+        <!-- ENDIF -->
+    </div>
+</div>

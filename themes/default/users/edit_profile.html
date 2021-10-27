@@ -1,0 +1,116 @@
+<!-- INCLUDE overall_header.html -->
+<section class="parallax-window" id="short">
+    <div id="sub_header">
+        <div class="container" id="sub_content">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{LANG_PROFILE}</h1>
+                    <div class="bread-crums">
+                        <a href="{SITE_URL}">{LANG_HOME}</a>
+                        <span class="bread-crums-span">&raquo;</span>
+                        <span class="current">{LANG_PROFILE}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- INCLUDE banner_top.html -->
+<section class="padding_60">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <div class="card profile-nav-tabs">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-3 mb-2 mb-sm-0">
+                                <div class="avarar">
+                                    <img src="{USER_AVATER}" />
+                                </div>
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li role="presentation" class="active"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><i class="pe-7s-id"></i> {LANG_PROFILE}</a></li>
+                                    <li role="presentation" class=""><a href="#changepassword" aria-controls="changepassword" role="tab" data-toggle="tab"><i class="pe-7s-lock"></i> {LANG_CHANGE_PASSWORD}</a></li>
+                                    <li><a class="logout" href="{PERMALINK_SIGNOUT}" onclick="return confirm('{LANG_DO_YOU_LOGOUT}');"><i class="pe-7s-power"></i>  {LANG_SIGNOUT}</a></li>
+                                </ul>
+                            </div> <!-- end col-->
+                            <div class="col-sm-9">
+                                <!-- IF USER_STATUS -->
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane active" id="profile">
+                                        <h3>{LANG_PROFILE}</h3>
+                    	                <p>{LANG_HERE_YOU_CAN_MAKE_CHANGES_TO_YOUR_PROFILE}</p>
+                                        <form id="form-update-profile" action="{PERMALINK_PROFILE}" method="post" enctype="multipart/form-data">
+                                            <input type="hidden" name="action" value="update_profile"/>
+                                            <input type="hidden" name="token" value="{TOKEN}" />
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="firstname">{LANG_FIRSTNAME}</label>
+                                                        <input class="form-control" name="firstname" type="text" id="firstname" placeholder="{LANG_FIRSTNAME}" value="{USER_FNAME}" required="" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="fullname">{LANG_LASTNAME}</label>
+                                                        <input class="form-control" name="lastname" type="text" id="lastname" placeholder="{LANG_LASTNAME}" value="{USER_LNAME}" required="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="username">{LANG_USERNAME}</label>
+                                                        <input class="form-control" name="username" type="text" id="username" placeholder="{LANG_USERNAME}" value="{USER_NAME}" required="" maxlength="25" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="email">{LANG_EMAIL_ADDRESS}</label>
+                                                        <input class="form-control" name="email" type="email" id="email" placeholder="{LANG_EMAIL_ADDRESS}" value="{USER_EMAIL}" required="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group mb-0">
+                                                <button type="button" id="button-update-profile-submit" class="button"><span></span> {LANG_UPDATE_PROFILE} </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane" id="changepassword">
+                                        <h3>{LANG_CHANGE_PASSWORD}</h3>
+                    	                <p>{LANG_INFO_CHANGE_PASSWORD}</p>
+                                        <form id="form-update-password" action="{PERMALINK_PROFILE}" method="post">
+                                            <input type="hidden" name="action" value="update_password"/>
+                                            <input type="hidden" name="token" value="{TOKEN}" />
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="password">{LANG_PASSWORD}</label>
+                                                        <input class="form-control" type="password" placeholder="{LANG_PASSWORD}" name="password" id="password" required="" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="confirmpassword">{LANG_CONFIRM_PASSWORD}</label>
+                                                        <input class="form-control" type="password" placeholder="{LANG_CONFIRM_PASSWORD}" name="confirmpassword" id="confirmpassword" required="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group mb-0">
+                                                <button type="button" id="button-update-password-submit" class="button"><span></span> {LANG_UPDATE_PASSWORD} </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <!-- ELSE -->
+                                <div class="activate-account-notes">{LANG_PLEASE_ACTIVATE_YOUR_ACCOUNT}</div>
+                                <!-- ENDIF -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- INCLUDE overall_footer.html -->

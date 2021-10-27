@@ -1,0 +1,21 @@
+<!-- BEGIN loop_testimonials -->
+<div class="item">
+    <div class="testimonial-item">
+        <div class="testimonial-content">
+            <div class="testimonial-review">
+                <p>{loop_testimonials.POST_CONTENT}</p>
+            </div>
+        </div>            
+        <div class="testimonial-footer">
+            <div class="testimonial-avatar">
+                <img src="{loop_testimonials.POST_THUMB}" alt="{loop_testimonials.POST_TITLE}">
+            </div>              
+            <div class="testimonial-owner-content">
+                <p class="testimonial-owner">{loop_testimonials.POST_TITLE}</p>
+                <p class="testimonial-position">{loop_testimonials.POST_POSITION}</p>
+                <div class="testimonial-rating"><ul class="stars">{loop_testimonials.POST_RATING}</ul></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END loop_testimonials -->

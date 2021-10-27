@@ -1,0 +1,166 @@
+/* 01- background */
+.button-more,
+.button,
+.navuser li a,
+.navuser li a.user-logged,
+.main-menu > li.show_normal:before,
+.info-boxes .intro-item:hover .intro-icon i,
+.info-boxes .intro-item a,
+.submit-ticket a,
+.tickets-list-2 h2 a,
+.pagination .nav-links a:hover,
+.pagination .nav-links span,
+.page-not-found-background,
+.go-up,
+a.button-radius:hover,
+a.button-more,
+.btn-primary,
+.button-browse-more,
+a.button-download,
+.progressbar-percent,
+.widget .tagcloud a:hover,
+.widget .widget-title i,
+.widget .widget-title:before,
+ul.tags li a:hover,
+.blog-continue a,
+.blog-img:before,
+.form-single-product .single-add-to-cart-button,
+.header-navbar-shop .navbar-categories li a:hover,
+.product-item .add-to-cart-button,
+.topics-list .badge,
+.slideshow .tparrows:hover,
+.slide-a a,
+.subcribe a,
+#sub_header .custom-search-input input[type=submit],
+.toggle-switch span,
+.toggle-switch span::after,
+.toggle-switch span::before,
+.main-menu-2 ul li:hover,
+.main-menu-2 ul li a:hover,
+.dropcap.color,
+.owl-nav [class*='owl-']:hover,
+.owl-dots .owl-dot.active span,
+.owl-dots .owl-dot:hover span,
+.bxslider-slide .bx-controls-direction a:hover,
+.bg_color,
+.box-team-style3 .team-hover,
+.contact-information ul li i,
+.comment-reply:hover,
+.widget-list ul li a:hover span.count,
+#sub_header.bg-pattern,
+.wrap-search-form button,
+.head-title:after,
+.support-item:hover i,
+.support-item a.btn-link,
+.callout-2,
+#preloader,
+.about-summry .icon-info,
+.divider:after,
+#sub_header.color,
+.blog-grid .meta-date,
+.home-more a,
+.services a.link,
+.profile-nav-tabs .nav-tabs li.active a, 
+.profile-nav-tabs .nav-tabs li a:hover {
+    background-color: #fa7642;
+}
+
+
+#sub_header.bg-effectiv {
+    background: -moz-linear-gradient(-45deg, #df6359, #fa7642);
+    background: -webkit-linear-gradient(-45deg, #df6359, #fa7642);
+    background: linear-gradient(-45deg, #df6359, #fa7642);
+}
+
+/* 02- color */
+a,
+header .main-menu a:hover,
+header .main-menu a:focus,
+.main-menu li a:hover,
+.main-menu li.current-menu-ancestor > a,
+.main-menu li.current-menu-item > a,
+.main-menu > ul > li:hover > a,
+.main-menu ul li.current-menu-item > a,
+.main-menu ul a:hover,
+.navuser li a:hover,
+.navuser li .menu-user li a:hover i,
+.navuser li .menu-user li a:hover,
+.main-menu ul ul li:hover > a,
+.info-boxes .intro-item .intro-icon i,
+.kb-votes-meta .kb-votes-count,
+.kb-votes .kb-vote,
+.accordion .accordion-title:hover a,
+.accordion .accordion-title:focus a,
+.accordion .accordion-title.active a,
+.tickets-list-2 ul li h3 a:hover,
+.knowledgebase-list li h4 a:hover,
+.login-description,
+.widget-list ul li a:hover,
+ul.blog-posts li .inner .post-detail span i,
+.footer-shop i,
+.header-navbar-shop .navbar-categories li.active a,
+.product-item .price,
+.blog-content h3 a,
+.product-summary .price,
+.slide-h2 h2,
+.profile-sidebar ul li a:hover,
+.profile-sidebar ul li.active a,
+footer ul.links li a:hover,
+footer ul.links li a:focus,
+#footer-top a:hover,
+#footer-bottom a:hover,
+.widget-category-nav ul li a[aria-expanded=true]:after,
+.widget-category-nav ul li a:hover,
+.widget-category-nav ul li.current a,
+.widget-category-nav ul li a[aria-expanded=true],
+.header-top .select-style select,
+.ul_list.color li i,
+footer .copyright a,
+.testimonial-review:before,
+.help-box:hover a i,
+.post-title,
+.commentlist li .author span,
+.main_title h2 span,
+.help-box:hover .help-tittle,
+.forum-inner .forum-name a:hover,
+.support-item i,
+.slider .content span,
+.box-icons .box-icon,
+.main_title h1,
+.main_title h2,
+.blog-grid-title a,
+.widget-list ul li.active a,
+.widget.widget-search-input .box-input:before {
+    color: #fa7642;
+}
+
+.navuser li a.button-singin:hover,
+.navuser li a.button-singup:hover,
+ul.tags li a:hover {
+    color: #fff;
+}
+
+/* 03- border color */
+.kb-votes .kb-vote,
+.widget .tagcloud a:hover,
+.help-box:hover a i,
+.divider:before {
+    border-color: #fa7642;
+}
+
+.card.card-primary,
+.loader:before,
+.main-menu ul ul,
+.main-menu ul ul ul:before {
+    border-top-color: #fa7642;
+}
+
+#coming-soon .countdown,
+.main-menu ul ul:before {
+    border-bottom-color: #fa7642;
+}
+
+.knowledgebase-footer .kb-votes .kb-vote:hover, .knowledgebase-footer .kb-votes .kb-vote:focus, .knowledgebase-footer .kb-votes .kb-vote.active {
+    background: #fa7642;
+    border: 1px solid #fa7642;
+}

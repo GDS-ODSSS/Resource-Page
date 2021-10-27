@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html dir="{SITE_DIR}" lang="{SITE_LANG}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>{SITE_NAME} - {PAGE_TITLE}</title>
+    <meta name="description" content="{SITE_DESCRIPTION}">
+    <meta name="keywords" content="{SITE_KEYWORDS}">
+    <meta name="author" content="nawaaugustine.com">
+    <meta name="robots" content="{THOP_METAROBOTS}">
+    <link rel="canonical" href="{SITE_URL}">
+    <meta property="og:title" content="{SITE_NAME} - {PAGE_TITLE}">
+    <meta property="og:description" content="{SITE_DESCRIPTION}">
+    <meta property="og:url" content="{SITE_URL}">
+    <meta property="og:site_name" content="{SITE_NAME}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="{THOP_METATWITTER}">
+    <meta name="twitter:title" content="{SITE_NAME} - {PAGE_TITLE}">
+    <meta name="twitter:description" content="{SITE_DESCRIPTION}">
+    <link rel="shortcut icon" href="<!-- IF THOP_FAVICON -->{THOP_FAVICON}<!-- ELSE -->{TEMPLATE_URL}/assets/images/favicon.ico<!-- ENDIF -->">
+    {THOP_LINK_GOOGLE_FONT}{THOP_BODY_GOOGLE_FONT}
+    <link rel="stylesheet" href="{TEMPLATE_URL}/assets/css/maintenance.css">
+</head>
+<body class="home maintenance">
+<div class="main-container">
+    <div class="preloader" style="display: none;"><i class="fi-widget" aria-hidden="true"></i></div>
+    <div id="wrapper" style="visibility: visible;">
+        <div class="center logotype">
+            <header>
+                <div class="logo-box istext" rel="home">
+                    <h1 class="site-title">{SITE_NAME}</h1>
+                </div>
+            </header>
+        </div>
+        <div id="content" class="site-content" style="position: relative; top: 0px;">
+            <div class="center">
+                <h2 class="heading font-center" style="font-weight:normal;font-style:normal">{HEADLINE}</h2>
+                <div class="description" style="font-weight:normal;font-style:normal">
+                    <p>{DESC}</p>
+                </div>
+                <!-- IF TIMER -->
+                <div id="coming-countdown">
+                    <div class="countdown">
+                        <div>
+                            <span id="dday"></span>
+                            <span id="days">Days</span>
+                        </div>
+                    </div>
+                    <div class="countdown">
+                        <div>
+                            <span id="dhour"></span>
+                            <span id="hours">Hours</span>
+                        </div>
+                    </div>
+                    <div class="countdown">
+                        <div>
+                            <span id="dmin"></span>
+                            <span id="minutes">Mins</span>
+                        </div>
+                    </div>
+                    <div class="countdown">
+                        <div>
+                            <span id="dsec"></span>
+                            <span id="seconds">Secs</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- ENDIF -->
+            </div>
+        </div>
+    </div>
+    <footer><div class="center"><div style="font-weight:normal;font-style:normal">{THOP_COPYRIGHT}</div></div></footer>
+    <picture class="bg-img"><img src="{BGIMG}"></picture>
+    <!-- IF TIMER -->
+    <script src="{TEMPLATE_URL}/assets/js/jquery.min.js"></script>
+    <script src="{TEMPLATE_URL}/assets/js/coming-soon.js"></script>
+    <script>var current = "{MATEND}";countdown('{TYEAR}', '{TMONTH}', '{TDAY}');</script>
+    <!-- ENDIF -->
+</div>
+</body>
+</html>

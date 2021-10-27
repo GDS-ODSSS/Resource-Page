@@ -1,0 +1,70 @@
+<!-- INCLUDE overall_header.html -->
+<section class="parallax-window" id="short">
+    <div id="sub_header">
+        <div class="container" id="sub_content">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{LANG_KNOWLEDGEBASE}</h1>
+                    <div class="bread-crums">
+                        <a href="{SITE_URL}">{LANG_HOME}</a>
+                        <span class="bread-crums-span">&raquo;</span>
+                        <a href="{PERMALINK_KNOWLEDGEBASE}">{LANG_KNOWLEDGEBASE}</a>
+                        <span class="bread-crums-span">&raquo;</span>
+                        <a href="{CATEGORIES_PERMANETLINK}">{CATEGORIES_TITLE}</a>
+                        <span class="bread-crums-span">&raquo;</span>
+                        <span class="current current-post">{POST_TITLE}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- INCLUDE banner_top.html -->
+<div class="container padding_80">
+    <div class="row">
+        <!-- IF THOP_SHOW_SIDEBAR && KNOWOP_SIDEBAR && THOP_POSITION_SIDEBAR eq 'left' -->
+        <!-- INCLUDE knowledgebase/sidebar_knowledgebase.html -->
+        <!-- ENDIF -->
+        <div class="<!-- IF THOP_SHOW_SIDEBAR && KNOWOP_SIDEBAR -->col-lg-9 col-md-8 col-sm-12<!-- ELSE -->col-md-12<!-- ENDIF -->">
+            <div class="head-title"><h3>{POST_TITLE}</h3></div>
+            <div class="knowledgebase-content">
+                <div class="post-meta">
+                    <span class="meta-author"><i class="pe-7s-user"></i> <a href="#">{POST_AUTHOR}</a></span>
+                    <span class="meta-comment"><i class="pe-7s-look"></i> <a href="#"> {POST_VIEW} {LANG_VIEWS}</a></span>
+                    <span class="meta-date"><i class="pe-7s-date"></i> <a href="#">{POST_TIME_AGO}</a></span>
+                    <span class="meta-categories"><i class="pe-7s-ticket"></i> <a href="{POST_TERM_PERMANETLINK}">{POST_TERM_NAME}</a></span>
+                </div>
+                <div class="highlight">{POST_CONTENT}</div>
+            </div>
+            <!-- IF IS_TAGS -->
+            <div class="head-title"><h5>{LANG_TAGS}</h5></div>
+            <div class="post-tags">
+                <!-- BEGIN loop_post_tags --><a href="{loop_post_tags.TAG_LINK}">{loop_post_tags.TAG_NAME}</a>{loop_post_tags.TAG_CHAR}<!-- END loop_post_tags -->
+            </div>
+            <!-- ENDIF -->
+            <!-- IF IS_POST_RELATED && KNOWOP_RELATED -->
+            <div class="related-post mt-20">
+                <div class="head-title"><h5>{LANG_RELATED}</h5></div>
+                <ul class="knowledgebase-list">
+                    <!-- BEGIN loop_knowledgebase_related -->
+                    <li>
+                        <h4><a href="{loop_knowledgebase_related.POST_PERMANETLINK}">{loop_knowledgebase_related.POST_TITLE}</a></h4>
+                        <div class="post-meta">
+                            <span class="meta-author"><i class="pe-7s-user"></i> {loop_knowledgebase_related.POST_AUTHOR}</span>
+                            <span class="meta-comment"><i class="pe-7s-look"></i> {loop_knowledgebase_related.POST_VIEW} {LANG_VIEWS}</span>
+                            <span class="meta-date"><i class="pe-7s-date"></i> <a href="#">{loop_knowledgebase_related.POST_TIME_AGO}</a></span>
+                            <span class="meta-categories"><i class="pe-7s-ticket"></i> <a href="{loop_knowledgebase_related.POST_TERM_PERMANETLINK}">{loop_knowledgebase_related.POST_TERM_NAME}</a></span>
+                        </div>
+                    </li>
+                    <!-- END loop_knowledgebase_related -->
+                </ul>
+            </div>
+            <!-- ENDIF -->
+            <!-- INCLUDE comments_disqus.html -->
+        </div>
+        <!-- IF THOP_SHOW_SIDEBAR && KNOWOP_SIDEBAR && THOP_POSITION_SIDEBAR eq 'right' -->
+        <!-- INCLUDE knowledgebase/sidebar_knowledgebase.html -->
+        <!-- ENDIF -->
+    </div>
+</div>
+<!-- INCLUDE overall_footer.html -->

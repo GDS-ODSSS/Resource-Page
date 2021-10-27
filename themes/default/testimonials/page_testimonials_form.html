@@ -1,0 +1,110 @@
+<!-- INCLUDE overall_header.html -->
+<section class="parallax-window" id="short">
+    <div id="sub_header">
+        <div class="container" id="sub_content">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{POST_TITLE}</h1>
+                    <div class="bread-crums">
+                        <a href="{SITE_URL}">{LANG_HOME}</a>
+                        <span class="bread-crums-span">&raquo;</span>
+                        <span class="current">{POST_TITLE}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- INCLUDE banner_top.html -->
+<div class="container padding_80">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="post-inner">
+                <div class="post-content">
+                    {POST_CONTENT}
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>    
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-lg-7 col-md-8 col-sm-12">
+            <div class="head-title"><h4>{POST_TITLE}</h4></div>
+            <!-- IF IS_USER -->
+            <!-- IF USER_IS_TESTIMONIAL_RATING -->
+            <div class="alert alert-warning" role="alert">{LANG_YOU_HAVE_ALREADY_SUBMITTED_YOUR_RATING}</div>
+            <div class="testimonial-item">
+                <div class="testimonial-content">
+                    <div class="testimonial-review"><p>{USER_TESTIMONIAL_CONTENT}</p></div>
+                </div>            
+                <div class="testimonial-footer">
+                    <div class="testimonial-avatar">
+                        <img src="{USER_TESTIMONIAL_THUMB}" alt="{USER_TESTIMONIAL_TITLE}">
+                    </div>              
+                    <div class="testimonial-owner-content">
+                        <p class="testimonial-owner">{USER_TESTIMONIAL_TITLE}</p>
+                        <p class="testimonial-position">{USER_TESTIMONIAL_POSITION}</p>
+                        <div class="testimonial-rating"><ul class="stars">{USER_TESTIMONIAL_RATING}</ul></div>
+                    </div>
+                </div>
+            </div>
+            <!-- ELSE -->
+            <div class="testimonial-form">
+                <div id="message-testimonial" class="alert alert-success" role="alert"></div>
+                <form method="post" id="form-submit-testimonial" class="" action="" role="form">
+                    <input type="hidden" name="action" value="submittestimonial">
+                    <input type="hidden" name="token" value="{TOKEN}">
+                    <div id="message-testimonial" class="alert alert-success" role="alert"></div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <div class="frm-input frm-icon">
+                                    <i class="far fa-user"></i>
+                                    <input type="text" name="username" id="username" class="input" value="{USER_NAME}" placeholder="{LANG_USERNAME}" maxlength="30">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <div class="frm-input frm-icon">
+                                    <i class="far fa-envelope"></i>
+                                    <input type="email" name="email" id="email" class="input" value="{USER_EMAIL}" placeholder="{LANG_EMAIL_ADDRESS}">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group form-group-rating">
+                        <label class="label-rating">{LANG_RATING}</label>
+                        <div class="frm-input frm-rating">
+                            <div class="rating">
+                                <input type="radio" name="rating" value="5" checked="" id="rating-5">
+                                <label for="rating-5"></label>
+                                <input type="radio" name="rating" value="4" id="rating-4">
+                                <label for="rating-4"></label>
+                                <input type="radio" name="rating" value="3" id="rating-3">
+                                <label for="rating-3"></label>
+                                <input type="radio" name="rating" value="2" id="rating-2">
+                                <label for="rating-2"></label>
+                                <input type="radio" name="rating" value="1" id="rating-1">
+                                <label for="rating-1"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="frm-input frm-icon">
+                            <textarea name="message" rows="6" id="message" class="form-control height-xs" placeholder="{LANG_MESSAGE}"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" id="button-submit-testimonial" class="button"><span></span> {LANG_SUBMIT}</button>
+                    </div>
+                </form>
+            </div>
+            <!-- ENDIF -->
+            <!-- ELSE -->
+            <div class="alert alert-warning" role="alert">{LANG_PLEASE_LOG_IN_TO_ADD_A_RATING}</div>
+            <!-- ENDIF -->
+        </div>
+    </div>
+</div>
+<!-- INCLUDE overall_footer.html -->

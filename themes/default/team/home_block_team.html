@@ -1,0 +1,18 @@
+<div class="padding_80 {TEAM_HOME_CLASS}">
+    <div class="container">
+        <!-- IF TEAM_TITLE -->
+        <div class="main_title">
+            <h2>{TEAM_TITLE}</h2>
+            <!-- IF TEAM_DESCRIPTION --><p>{TEAM_DESCRIPTION}</p><!-- ENDIF -->
+            <span class="divider"></span>
+        </div>
+        <!-- ENDIF -->
+        <!-- IF TEAM_STYLE eq '3' -->
+        <!-- INCLUDE team/loop_team_style3.html -->
+        <!-- ELSEIF TEAM_STYLE eq '2' -->
+        <!-- INCLUDE team/loop_team_style2.html -->
+        <!-- ELSE -->
+        <!-- INCLUDE team/loop_team_style1.html -->
+        <!-- ENDIF -->
+    </div>
+</div>

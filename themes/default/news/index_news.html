@@ -1,0 +1,66 @@
+<!-- INCLUDE overall_header.html -->
+<section class="parallax-window" id="short">
+    <div id="sub_header">
+        <div class="container" id="sub_content">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{CATEGORIES_TITLE}</h1>
+                    <div class="bread-crums">
+                        <a href="{SITE_URL}">{LANG_HOME}</a>
+                        <span class="bread-crums-span">&raquo;</span>
+                        <a href="{PERMALINK_NEWS}">{LANG_NEWS}</a>
+                        <span class="bread-crums-span">&raquo;</span>
+                        <span class="current">{CATEGORIES_TITLE}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- INCLUDE banner_top.html -->
+<div class="container padding_80">
+    <div class="row">
+        <!-- IF THOP_SHOW_SIDEBAR && NEWSOP_SIDEBAR && THOP_POSITION_SIDEBAR eq 'left' -->
+        <!-- INCLUDE news/sidebar_news.html -->
+        <!-- ENDIF -->
+        <div class="<!-- IF THOP_SHOW_SIDEBAR && NEWSOP_SIDEBAR -->col-lg-9 col-md-8 col-sm-12<!-- ELSE -->col-md-12<!-- ENDIF -->">
+            <div class="head-title">
+                <!-- IF THE_CATEGORIE_ID -->
+                <h4>{CATEGORIES_TITLE}</h4>
+                <!-- ELSEIF IS_SEARCH -->
+                <h4>{LANG_SEARCH} : <small>{SEARCH_TXT}</small></h4>
+                <!-- ELSE -->
+                <h4>{LANG_NEWS}</h4>
+                <!-- ENDIF -->
+            </div>
+            <!-- IF IS_SEARCH && SEARCH_FOUND eq '0' -->
+            <div class="alert alert-warning text-center" role="alert">{LANG_NOT_FOUND}!</div>
+            <!-- ENDIF -->
+            <ul class="blog-posts">
+                <!-- BEGIN loop_news -->
+                <li>
+                    <div class="photo">
+                        <img src="{loop_news.POST_THUMB_M}" alt="">
+                        <span class="image-fader"><span class="hover-icon"><a href="{loop_news.POST_PERMANETLINK}"><i class="pe-7s-look"></i></a></span></span>
+                    </div>
+                    <div class="inner">
+                        <h3><a href="{loop_news.POST_PERMANETLINK}">{loop_news.POST_TITLE}</a></h3>
+                        <p>{loop_news.POST_SHORT}</p>
+                        <div class="post-detail">
+                            <span class="post-date"><i class="pe-7s-date"></i> <a href="#">{loop_news.POST_MODIFIED}</a></span>
+                            <span class="post-date"><i class="pe-7s-ticket"></i> <a href="{loop_news.POST_TERM_PERMANETLINK}">{loop_news.POST_TERM_NAME}</a></span>
+                            <span class="post-date"><i class="pe-7s-look"></i> <a href="#">{loop_news.POST_VIEW} {LANG_VIEWS}</a></span>
+                        </div>
+                        <a href="{loop_news.POST_PERMANETLINK}" class="button-more">{LANG_CONTINUE_READING}</a>
+                    </div>
+                </li>
+                <!-- END loop_news -->
+            </ul>
+            <!-- IF SHOW_PAGINATION --><nav class="navigation pagination"><div class="nav-links">{PAGINATION}</div></nav><!-- ENDIF -->
+        </div>
+        <!-- IF THOP_SHOW_SIDEBAR && NEWSOP_SIDEBAR && THOP_POSITION_SIDEBAR eq 'right' -->
+        <!-- INCLUDE news/sidebar_news.html -->
+        <!-- ENDIF -->
+    </div>
+</div>
+<!-- INCLUDE overall_footer.html -->

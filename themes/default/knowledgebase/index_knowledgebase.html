@@ -1,0 +1,45 @@
+<!-- INCLUDE overall_header.html -->
+<section class="parallax-window" id="short">
+    <div id="sub_header">
+        <div class="container padding_80" id="sub_content">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{LANG_KNOWLEDGEBASE}</h1>
+                    <div class="bread-crums">
+                        <a href="{SITE_URL}">{LANG_HOME}</a>
+                        <span class="bread-crums-span">&raquo;</span>
+                        <span class="current">{LANG_KNOWLEDGEBASE}</span>
+                    </div>
+                    <div class="custom-search-input">
+                        <form method="get" action="{SITE_URL}/knowledgebase">
+                            <div class="input-group">
+                                <i class="fas fa-search"></i>
+                                <input type="text" name="search" id="search" class="search-query" placeholder="{THOP_SUB_HEADER_SEARCH_TEXT}" value="{SEARCH_TXT}" />
+                                <input type="submit" value="{LANG_SEARCH}">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- INCLUDE banner_top.html -->
+<div class="container padding_80">
+    <div class="row">
+        <!-- BEGIN terms_knowledgebase -->
+        <div class="col-md-6">
+            <div class="topics-list">
+                <h5><a href="{terms_knowledgebase.TERM_PERMANENT_LINK}">{terms_knowledgebase.TERM_NAME} <span class="badge">{terms_knowledgebase.TERM_COUNT_POSTS}</span></a></h5>
+                <ul>
+                    <!-- BEGIN loop_knowledgebase --> 
+                    <li><a href="{loop_knowledgebase.POST_PERMANETLINK}" title="{loop_knowledgebase.POST_TITLE}"><i class="pe-7s-note2"></i> {loop_knowledgebase.POST_TITLE}</a></li>
+                    <!-- END loop_knowledgebase -->
+                </ul>
+                <a href="{terms_knowledgebase.TERM_PERMANENT_LINK}" class="readmore">{LANG_VIEW_ALL} <i class="fas fa-angle-right"></i></a>
+            </div>
+        </div>
+        <!-- END terms_knowledgebase -->
+    </div>
+</div>
+<!-- INCLUDE overall_footer.html -->
